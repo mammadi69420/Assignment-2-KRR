@@ -1,0 +1,224 @@
+@prefix : <http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix untitled-ontology-3: <http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#> .
+@base <http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3/> .
+
+<http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#affects
+untitled-ontology-3:affects rdf:type owl:ObjectProperty ;
+                            rdfs:domain untitled-ontology-3:Incident ;
+                            rdfs:range untitled-ontology-3:ITResource .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#assignedTo
+untitled-ontology-3:assignedTo rdf:type owl:ObjectProperty ;
+                               rdfs:domain untitled-ontology-3:Incident ;
+                               rdfs:range untitled-ontology-3:Employee .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#manages
+untitled-ontology-3:manages rdf:type owl:ObjectProperty ;
+                            rdfs:domain untitled-ontology-3:Employee ;
+                            rdfs:range untitled-ontology-3:ITResource .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#reportedBy
+untitled-ontology-3:reportedBy rdf:type owl:ObjectProperty ;
+                               rdfs:domain untitled-ontology-3:Incident ;
+                               rdfs:range untitled-ontology-3:Person .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#usesResource
+untitled-ontology-3:usesResource rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#usesTechnology
+untitled-ontology-3:usesTechnology rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#worksOn
+untitled-ontology-3:worksOn rdf:type owl:ObjectProperty ;
+                            rdfs:domain untitled-ontology-3:Employee ;
+                            rdfs:range untitled-ontology-3:Project .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#hasEmployeeID
+untitled-ontology-3:hasEmployeeID rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#hasExperience
+untitled-ontology-3:hasExperience rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#hasIPAddress
+untitled-ontology-3:hasIPAddress rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#hasProjectCode
+untitled-ontology-3:hasProjectCode rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#hasSeverity
+untitled-ontology-3:hasSeverity rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Application
+untitled-ontology-3:Application rdf:type owl:Class ;
+                                rdfs:subClassOf untitled-ontology-3:ITResource .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Database
+untitled-ontology-3:Database rdf:type owl:Class ;
+                             rdfs:subClassOf untitled-ontology-3:ITResource .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Developer
+untitled-ontology-3:Developer rdf:type owl:Class ;
+                              rdfs:subClassOf untitled-ontology-3:Employee .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Employee
+untitled-ontology-3:Employee rdf:type owl:Class ;
+                             rdfs:subClassOf untitled-ontology-3:Person .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#ITResource
+untitled-ontology-3:ITResource rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Incident
+untitled-ontology-3:Incident rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Manager
+untitled-ontology-3:Manager rdf:type owl:Class ;
+                            rdfs:subClassOf untitled-ontology-3:Employee .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Person
+untitled-ontology-3:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Project
+untitled-ontology-3:Project rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#ProjectDeveloper
+untitled-ontology-3:ProjectDeveloper rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( untitled-ontology-3:Employee
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty untitled-ontology-3:worksOn ;
+                                                                                  owl:someValuesFrom untitled-ontology-3:Project
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:subClassOf untitled-ontology-3:Employee .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Server
+untitled-ontology-3:Server rdf:type owl:Class ;
+                           rdfs:subClassOf untitled-ontology-3:ITResource .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#SystemAdministrator
+untitled-ontology-3:SystemAdministrator rdf:type owl:Class ;
+                                        rdfs:subClassOf untitled-ontology-3:Employee .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Technology
+untitled-ontology-3:Technology rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Ahmed
+untitled-ontology-3:Ahmed rdf:type owl:NamedIndividual ,
+                                   untitled-ontology-3:Developer ;
+                          untitled-ontology-3:worksOn untitled-ontology-3:BankingProject ,
+                                                      untitled-ontology-3:MobileAppProject .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Ali
+untitled-ontology-3:Ali rdf:type owl:NamedIndividual ,
+                                 untitled-ontology-3:Manager ;
+                        untitled-ontology-3:manages untitled-ontology-3:DatabaseServer01 ;
+                        untitled-ontology-3:worksOn untitled-ontology-3:BankingProject .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#BankingApplication
+untitled-ontology-3:BankingApplication rdf:type owl:NamedIndividual ,
+                                                untitled-ontology-3:Application .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#BankingProject
+untitled-ontology-3:BankingProject rdf:type owl:NamedIndividual ,
+                                            untitled-ontology-3:Project ;
+                                   owl:differentFrom untitled-ontology-3:MobileAppProject .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#DatabaseServer01
+untitled-ontology-3:DatabaseServer01 rdf:type owl:NamedIndividual ,
+                                              untitled-ontology-3:Database ,
+                                              untitled-ontology-3:Server .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Incident101
+untitled-ontology-3:Incident101 rdf:type owl:NamedIndividual ,
+                                         untitled-ontology-3:Incident ;
+                                untitled-ontology-3:affects untitled-ontology-3:WebServer01 .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#MobileAppProject
+untitled-ontology-3:MobileAppProject rdf:type owl:NamedIndividual ,
+                                              untitled-ontology-3:Project .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#Sara
+untitled-ontology-3:Sara rdf:type owl:NamedIndividual ,
+                                  untitled-ontology-3:SystemAdministrator ;
+                         untitled-ontology-3:manages untitled-ontology-3:WebServer01 .
+
+
+###  http://www.semanticweb.org/muhammadabdulrehma/ontologies/2026/9/untitled-ontology-3#WebServer01
+untitled-ontology-3:WebServer01 rdf:type owl:NamedIndividual ,
+                                         untitled-ontology-3:Server .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( untitled-ontology-3:BankingProject
+                        untitled-ontology-3:MobileAppProject
+                        untitled-ontology-3:WebServer01
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
